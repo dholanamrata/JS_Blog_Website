@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="blog.css">
+    <link rel="stylesheet" href="description.css" />
+
+</head>
+
+<body>
+    <header>
+        <div class="header">
+            <button class="menu-btn" aria-label="Open Menu">
+                <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"
+                    aria-label="Open Menu" role="img">
+                    <path d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
+                </svg>
+            </button>
+            <div class="logo">Bloge Website</div>
+            <nav class="menu">
+                <div class="drawer">
+                    <button class="close-btn" aria-label="Close Menu">
+                        <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"
+                            aria-label="Close Menu" role="img">
+                            <path d="M0 0h24v24H0z" fill="none"></path>
+                            <path
+                                d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z">
+                            </path>
+                        </svg>
+                    </button>
+                    <a class="nav_a" href="blog.html">Home</a>
+                    <a class="nav_a" href="signform.html">Sign In</a>
+                    <a class="nav_a" href="loginform.html">Log In</a>
+                    <a class="nav_a" href="createBolg.html">Create Blog</a>
+
+                </div>
+                <div class="blank"></div>
+            </nav>
+        </div>
+    </header>
+    <script src="blog.js"></script>
+    <div class="description">
+        <img class="images" src="https://miro.medium.com/v2/resize:fit:720/0*S8WritM-1NnZr_Yk" alt="">
+        <p>Ever wanted to create a Python library, albeit for your team at work or for some open source project online?
+            In this blog you will learn how to!</p><br>
+        <p>The tutorial is easiest to follow when you are using the same tools, however it is also possible for you to
+            use different ones.</p>
+        <br>
+        <p>The tools used in this tutorial are:</p>
+        <ul>
+            <li>- Linux command prompt</li>
+        </ul>
+        <ul>
+            <li>- Visual Studio Code</li>
+        </ul>
+        <h3>Step 1: Create a directory in which you want to put your library</h3>
+        <p>Open your command prompt and create a folder in which you will create your Python library.</p>
+        <br>
+        <h4>Remember:</h4>
+        <ul>
+            <li>- With pwd you can see your present working directory.</li>
+            <li>- With ls you can list the folders and files in your directory.</li>
+            <li>- With cd <path> you can change the current present directory you are in.</li>
+            <li>- With mkdir <folder> you can create a new folder in your working directory.</li>
+        </ul>
+        <h3>Step 2: Create a virtual environment for your folder</h3>
+        <p>When starting your project, it is always a good idea to create a virtual environment to encapsulate your
+            project. A virtual environment consists of a certain Python version and some libraries.
+
+            Virtual environments prevent the issue of running into dependency issues later on. For example, in older
+            projects you might have worked with older versions of the numpy library. Some old code, that once worked
+            beautifully, might stop working once you update its version. Perhaps parts of numpy are no longer compatible
+            with other parts of your program. Creating virtual environments prevents this. They are also useful in cases
+            when you are collaborating with someone else, and you want to make sure that your application is working on
+            their computer, and vice versa.</p>
+    </div>
+
+</body>
+
+</html>
+
+
+<!-- Please change the pen width to see the sidebar -->
+
+<!-- <img class="img" src="https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="Image"/> -->

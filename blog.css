@@ -1,0 +1,327 @@
+:root {
+  --link-color: #6C4BB4;
+  --primary-color-opacity: #e9d5ff;
+  --white-shade: #f0f8ff;
+  --secondary-color: #1e293b;
+  --primary-padding: 8px;
+  --pilled-shape-radius: 40px;
+  --color1: #36EB84;
+  --color2: #2BCDB5;
+  --primary-gradient: linear-gradient(to right, var(--color2), var(--color1))
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Comforter+Brush&display=swap');
+
+:root {
+  --header-height: 53px;
+}
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Segoe UI, SegoeUI, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+  /*for removing the blue color layer when clicked on mobile devices*/
+  word-break: break-word;
+}
+
+header {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background: #fff;
+  z-index: 250;
+  height: var(--header-height);
+}
+
+.header {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--header-height);
+}
+
+.header .logo {
+  font-family: 'Comforter Brush', cursive;
+  padding-left: 40px;
+  font-size: 38px;
+}
+
+.header .menu .drawer {
+  display: flex;
+  height: var(--header-height);
+  padding-right: 100px;
+}
+
+.header .menu .drawer a {
+  text-transform: capitalize;
+  transition: all 0.1s linear;
+  display: flex;
+  align-items: center;
+  padding: 0 30px;
+  color: #585b63;
+  font-size: 17.4px;
+}
+
+.menu-btn,
+.close-btn {
+  background: transparent;
+  border: none;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  position: absolute;
+  left: 11px;
+  top: 8px;
+  display: none;
+  cursor: pointer;
+}
+
+.menu-btn {
+  left: 3px;
+}
+
+.close-btn:active,
+.menu-btn:active {
+  background: #f3f3f3;
+}
+
+.img {
+  height: calc(100vh - 53px);
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 1140px) {
+  .header .menu .drawer {
+    padding: 0;
+  }
+}
+
+.body {
+  overflow: hidden;
+}
+
+@media (max-width: 920px) {
+  .header .menu {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: -925px;
+    width: 100%;
+    height: 100%;
+    z-index: 300;
+  }
+
+  .header .menu .blank {
+    height: 100%;
+    flex: 1;
+  }
+
+  .header .menu .drawer {
+    box-shadow: 2px 0 12px rgb(0 0 0 / 40%);
+    padding-top: 50px;
+    height: 100%;
+    width: 225px;
+    background: #fff;
+    flex-direction: column;
+    position: fixed;
+    left: -240px;
+    transition: all 200ms linear;
+    overflow: auto;
+  }
+
+  .header .menu .drawer a {
+    padding: 20px;
+  }
+
+  .menu-btn,
+  .close-btn {
+    display: block;
+  }
+
+  .header .logo {
+    margin-left: 17px;
+  }
+
+  .drawer-visible {
+    left: 0 !important;
+  }
+
+  .blur {
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(15px);
+    left: 0 !important;
+  }
+}
+
+/*--------------------------------- blog section--------------------------- */
+.mainblog {
+  /* border: 2px solid red; */
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 60px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  font-family: 'Raleway', sans-serif;
+}
+
+.inlineblog {
+  border: 1px solid #f3f3f3;
+  height: 400px;
+  width: 30%;
+  padding: 3px;
+ 
+  
+  cursor: pointer;
+  font-family: 'Raleway', sans-serif;
+}
+.inlineblog:hover{
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+  border-radius: 8px;
+}
+
+.img {
+
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+}
+
+h5 {
+  color: grey;
+}
+
+.description {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 60px;
+  padding: 20px;
+  /* border: 2px solid red; */
+}
+
+.img {
+  width: 100%;
+}
+
+.header .menu .drawer a:is(:link, :active, :visited).active {
+  color: black;
+  background: var(--primary-gradient);
+
+}
+
+@media screen and (min-width:993px) {
+
+  .inlineblog {
+    width: 30%;
+    overflow: auto;
+  }
+
+  .img {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width:992px) {
+  .body {
+    overflow: hidden;
+  }
+
+  .inlineblog {
+    width: 45%;
+
+  }
+}
+
+@media screen and (max-width:768px) {
+  .body {
+    overflow: hidden;
+  }
+  .inlineblog {
+    width: 100%;  
+  }
+}
+
+@media screen and (max-width:576px) {
+  .body {
+    overflow: hidden;
+  }
+
+  .mainblog {
+    height: 100vh;
+    padding-left: 0;
+  }
+  .inlineblog {
+    width: 100%;
+    overflow: auto;
+  }
+  
+}
+@media screen and (max-width:576px) {
+  .header .logo{
+    font-size: 25px;
+  } 
+}
+
+/* --------------------------------footer------------------------------- */
+.footer {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  /* border: 2px solid red ; */
+  gap: 5px;
+  padding-bottom: 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+  border-radius: 8px;
+}
+
+.fa {
+  padding: 15px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="blog.css">
+    <link rel="stylesheet" href="description.css" />
+
+</head>
+
+<body>
+    <header>
+        <div class="header">
+            <button class="menu-btn" aria-label="Open Menu">
+                <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"
+                    aria-label="Open Menu" role="img">
+                    <path d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
+                </svg>
+            </button>
+            <div class="logo">Bloge Website</div>
+            <nav class="menu">
+                <div class="drawer">
+                    <button class="close-btn" aria-label="Close Menu">
+                        <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"
+                            aria-label="Close Menu" role="img">
+                            <path d="M0 0h24v24H0z" fill="none"></path>
+                            <path
+                                d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z">
+                            </path>
+                        </svg>
+                    </button>
+                    <a class="nav_a" href="blog.html">Home</a>
+                    <a class="nav_a" href="signform.html">Sign In</a>
+                    <a class="nav_a" href="loginform.html">Log In</a>
+                    <a class="nav_a" href="createBolg.html">Create Blog</a>
+
+                </div>
+                <div class="blank"></div>
+            </nav>
+        </div>
+    </header>
+    <script src="blog.js"></script>
+    <div class="description">
+        <p>Foreground and background separation had always been a huge problem before the onset of object detection
+            based neural networks. Techniques from image processing like color based segmentation, depth based
+            segmentation and other traditional techniques had to be used. Today with the help of , off the shelf deep
+            learning models, its become very easy to mask region of interest and separate foreground from background.
+        </p>
+        <br>
+        <h2>Applications :-</h2>
+        <ul>
+            <li>Portrait Mode with Deep Learning</li>
+            <li>Background blur on video calls while working from home</li>
+        </ul>
+        <br>
+        <h2>Portrait Mode with Deep Learning</h2>
+        <br>
+        <p>Portrait mode became famous when images were captured from DSLR cameras. High end DSLR cameras have an option
+            to reduce the focal length on the camera to make sure the camera can capture images with major focus on the
+            small distance objects in a scene and automatically blurring the background. Such images became very famous
+            as it automatically sharpens the subject/object infront of the camera.</p>
+        <br>
+        <p>This trend continued by adding two cameras to smart phones, to capture depth information. Based on depth
+            threshold, segmenting region of interest was very easy. Portrait mode started trending on mobile phones
+            because of dual cameras that can give depth information.</p>
+        <br>
+        <p>With the popularity of object detection based networks, portrait mode was possible without high end DSLR or
+            dual cameras.</p>
+        <br>
+        <p>Lets learn how portrait mode works without dual camera or high end DSLR.</p>
+        <ol>
+            <li>First you need a good camera and subject. Capture an image which is well focused without any distortion
+                or evident noise.</li>
+            <li>Get the image and pass it through an object detection network and get the output foreground boundary
+                from the region proposal network.</li>
+            <li>Separate the foreground and background as two separate images.
+            <li>Blur the background and sharpen the foreground.</li>
+            </li>
+        </ol>
+        <img class="images" src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*wIbYT7YGUxVFF2ljBhu9IQ.png" alt="">
+    </div>
+
+</body>
+
+</html>
+
+
+<!-- Please change the pen width to see the sidebar -->
+
+<!-- <img class="img" src="https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="Image"/> -->

@@ -1,0 +1,178 @@
+:root {
+  --link-color: #6c4bb4;
+  --primary-color-opacity: #e9d5ff;
+  --white-shade: #f0f8ff;
+  --secondary-color: #1e293b;
+  --primary-padding: 8px;
+  --pilled-shape-radius: 40px;
+  --color1: #36eb84;
+  --color2: #2bcdb5;
+  --primary-gradient: linear-gradient(to right, var(--color2), var(--color1));
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Bad+Script&family=Pacifico&family=Sacramento&display=swap");
+
+h2 {
+  font-family: "Bad Script", cursive;
+}
+
+.container {
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px #353636;
+  background: #fff;
+  width: 25%;
+  margin: 8% auto 0;
+}
+
+.item-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .log-in{
+    font-size: 35px;
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+}
+.log-in::after{
+    content: "";
+    display: block;
+    width: 60%;
+    height: 3px;
+    margin-top: 8px;
+    background: var(--primary-gradient);
+    margin-inline: auto;
+} */
+.form-input {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+input[type="text"] {
+  padding: var(--primary-padding);
+  width: 300px;
+  border-radius: var(--pilled-shape-radius);
+  border: none;
+  background: #e7fdf0;
+  color: var(--secondary-color);
+  outline: none;
+  border: 1px solid transparent;
+}
+
+#container {
+  padding: var(--primary-padding);
+  width: 300px;
+  /* border-radius: var(--pilled-shape-radius); */
+  border: none;
+  background: #e7fdf0;
+  color: var(--secondary-color);
+  outline: none;
+  border: 1px solid transparent;
+}
+
+@media only screen and (max-width: 300px) {
+  input[type="text"] {
+    width: 200px;
+  }
+}
+
+input[type="text"]:focus-visible,
+:focus-visible {
+  border: 1px solid var(--color1);
+  background: transparent;
+}
+
+#container:focus-visible,
+:focus-visible {
+  border: 1px solid var(--color1);
+  background: transparent;
+}
+
+.label {
+  color: var(--secondary-color);
+  margin-bottom: 3px;
+}
+
+.display-space-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0 10px 0;
+}
+
+.item-container button {
+  border-radius: 50%;
+  border: none;
+  padding: 5px;
+  background: transparent;
+  margin-left: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 2px 2px 5px #353636;
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: var(--primary-padding);
+  border-radius: var(--pilled-shape-radius);
+  border: none;
+  background: var(--primary-gradient);
+  color: var(--white-shade);
+  margin: 10px 0 10px 0;
+  font-weight: bold;
+  font-size: x-large;
+}
+
+button:active {
+  border-radius: 50px;
+  background: #4fc482;
+  box-shadow: inset 2px 2px 5px #348156, inset -2px -2px 5px #6affae;
+  /* background: red; */
+}
+
+.chekbox-label {
+  font-size: 14px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--link-color);
+  font-size: 14px;
+}
+
+/* @media screen and (max-width: 1024px) {
+  .container {
+    width: 70%;
+  }
+
+  input[type="text"] {
+    width: 500px;
+  }
+} */
+@media screen and (min-width:993px) {
+  .container {
+      width: 40%;
+      height: auto;
+  }
+
+  input[type="text"],
+  input[type="password"] {
+      width: auto;
+  }
+}
+
+@media screen and (max-width:992px) {
+  .container {
+      width: 40%;
+      height: auto;
+  }
+
+  input[type="text"],
+  input[type="password"] {
+      width: auto;
+  }
+}
